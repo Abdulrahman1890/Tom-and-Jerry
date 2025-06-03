@@ -31,7 +31,7 @@ import com.example.tomandjerry.ui.theme.BackgroundColor
 import com.example.tomandjerry.ui.theme.DarkBlueColor
 import com.example.tomandjerry.ui.theme.DescriptionTextColor
 import com.example.tomandjerry.ui.theme.Ibm
-import com.example.tomandjerry.ui.theme.SecondaryButtonColor
+import com.example.tomandjerry.ui.theme.SmallCardColor
 import com.example.tomandjerry.ui.theme.TitleTextColor
 
 
@@ -75,7 +75,7 @@ fun ProductDetailsScreen() {
                             modifier = Modifier
                                 .size(width = 125.dp, height = 40.dp)
                                 .clip(RoundedCornerShape(10.dp))
-                                .background(SecondaryButtonColor)
+                                .background(SmallCardColor)
                                 .clickable {}
                                 .padding(horizontal = 10.dp, vertical = 9.dp)
                         ) {
