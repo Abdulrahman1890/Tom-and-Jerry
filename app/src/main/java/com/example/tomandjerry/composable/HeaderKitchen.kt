@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.tomandjerry.R
 import com.example.tomandjerry.ui.theme.Ibm
+import com.example.tomandjerry.ui.theme.LightWhiteTextColor
 
 @Composable
 fun HeaderKitchen() {
@@ -50,7 +51,7 @@ fun HeaderKitchen() {
                 SpacerHorizontal(10)
                 Text(
                     text = "High tension",
-                    color = Color.White,
+                    color = LightWhiteTextColor,
                     fontFamily = Ibm,
                     fontWeight = FontWeight.Medium,
                     fontSize = 21.sp
@@ -68,7 +69,7 @@ fun HeaderKitchen() {
                 SpacerHorizontal(10)
                 Text(
                     text = "Shocking foods",
-                    color = Color.White,
+                    color = LightWhiteTextColor,
                     fontFamily = Ibm,
                     fontWeight = FontWeight.Medium,
                     fontSize = 21.sp

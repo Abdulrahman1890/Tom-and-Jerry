@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -28,24 +29,22 @@ import androidx.compose.ui.unit.sp
 import com.example.tomandjerry.R
 import com.example.tomandjerry.ui.theme.BackgroundColor
 import com.example.tomandjerry.ui.theme.DarkBlueColor
+import com.example.tomandjerry.ui.theme.DescriptionTextColor
 import com.example.tomandjerry.ui.theme.Ibm
-import com.example.tomandjerry.ui.theme.PrimaryTextColor
 import com.example.tomandjerry.ui.theme.SecondaryButtonColor
-import com.example.tomandjerry.ui.theme.TestTextColor
+import com.example.tomandjerry.ui.theme.TitleTextColor
 
 
 @Composable
 fun ProductDetailsScreen() {
     Box(
         modifier = Modifier
-            .fillMaxSize()
+            .height(1000.dp)
     ) {
 
         Box(
             modifier = Modifier
-                .fillMaxSize()
-                .height(144.dp)
-                .padding(top = 256.dp)
+                .padding(top = 205.dp)
                 .background(
                     BackgroundColor,
                     shape = RoundedCornerShape(21.dp)
@@ -54,21 +53,21 @@ fun ProductDetailsScreen() {
             Column(
                 horizontalAlignment = Alignment.Start,
                 modifier = Modifier
-                    .padding(top = 21.dp)
+                    .padding(start = 21.dp, end = 21.dp, bottom = 21.dp, top = 42.dp)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(21.dp)
+
                 ) {
                     Column() {
                         Text(
                             text = "Electric Tom pasta",
-                            color = TestTextColor,
+                            color = TitleTextColor,
                             fontFamily = Ibm,
-                            fontWeight = FontWeight.SemiBold,
+                            fontWeight = FontWeight.Medium,
                             fontSize = 27.sp
                         )
                         SpacerVertical(16)
@@ -117,17 +116,64 @@ fun ProductDetailsScreen() {
                             .size(width = 32.dp, height = 32.dp)
                     )
                 }
-
+                SpacerVertical(10)
                 Text(
                     text = "Pasta cooked with a charger cable and\nsprinkled with questionable cheese. Make sure\nto unplug it before eating (or not, you decide).",
-                    color = DarkBlueColor,
+                    color = DescriptionTextColor,
                     fontFamily = Ibm,
                     fontWeight = FontWeight.Medium,
-                    fontSize = 16.sp,
-                    textAlign = TextAlign.Center
+                    fontSize = 18.sp,
+                    textAlign = TextAlign.Start
                 )
-
-
+                SpacerVertical(32)
+                Text(
+                    text = "Details",
+                    color = TitleTextColor,
+                    fontFamily = Ibm,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 24.sp
+                )
+                SpacerVertical(10)
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                ) {
+                    Box(modifier = Modifier.weight(1f)) {
+                        DetailsCard(R.drawable.temperature, "1000 V", "Temperature")
+                    }
+                    SpacerHorizontal(10)
+                    Box(modifier = Modifier.weight(1f)) {
+                        DetailsCard(R.drawable.timer, "3 sparks", "Time")
+                    }
+                    SpacerHorizontal(10)
+                    Box(modifier = Modifier.weight(1f)) {
+                        DetailsCard(R.drawable.devil, "1M 12K", "No. of deaths")
+                    }
+                }
+                SpacerVertical(32)
+                Text(
+                    text = "Preparation method",
+                    color = TitleTextColor,
+                    fontFamily = Ibm,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 24.sp
+                )
+                SpacerVertical(10)
+                Box(modifier = Modifier.weight(1f)) {
+                    PreparationMethodCard("1", "Put the pasta in a toaster.")
+                }
+                SpacerVertical(10)
+                Box(modifier = Modifier.weight(1f)) {
+                    PreparationMethodCard("2", "Pour battery juice over it.")
+                }
+                SpacerVertical(10)
+                Box(modifier = Modifier.weight(1f)) {
+                    PreparationMethodCard("3", "Wait for the spark to ignite.")
+                }
+                SpacerVertical(10)
+                Box(modifier = Modifier.weight(1f)) {
+                    PreparationMethodCard("4", "Serve with an insulating glove.")
+                }
 
             }
         }
@@ -135,7 +181,7 @@ fun ProductDetailsScreen() {
         Box(
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .padding(top = 60.dp, end = 30.dp)
+                .padding(top = 20.dp, end = 30.dp)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.makarona),
@@ -143,7 +189,9 @@ fun ProductDetailsScreen() {
                 modifier = Modifier.size(width = 230.dp, height = 235.dp)
             )
         }
+
     }
+
 
 }
 
