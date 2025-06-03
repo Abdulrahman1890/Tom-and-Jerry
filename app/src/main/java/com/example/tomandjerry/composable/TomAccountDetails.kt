@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -60,7 +61,8 @@ fun TomAccountDetails() {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceEvenly,
                         modifier = Modifier
-                            .size(width = 213.dp, height = 75.dp)
+                            .fillMaxWidth()
+                            .height(75.dp)
                             .clip(RoundedCornerShape(16.dp))
                             .background(SmallCardColor)
                     ) {
@@ -73,7 +75,8 @@ fun TomAccountDetails() {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceEvenly,
                         modifier = Modifier
-                            .size(width = 213.dp, height = 75.dp)
+                            .fillMaxWidth()
+                            .height(75.dp)
                             .clip(RoundedCornerShape(16.dp))
                             .background(GreenColor)
                     ) {
@@ -88,7 +91,8 @@ fun TomAccountDetails() {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceEvenly,
                         modifier = Modifier
-                            .size(width = 213.dp, height = 75.dp)
+                            .fillMaxWidth()
+                            .height(75.dp)
                             .clip(RoundedCornerShape(16.dp))
                             .background(RedColor)
                     ) {
@@ -101,7 +105,8 @@ fun TomAccountDetails() {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceEvenly,
                         modifier = Modifier
-                            .size(width = 213.dp, height = 75.dp)
+                            .fillMaxWidth()
+                            .height(75.dp)
                             .clip(RoundedCornerShape(16.dp))
                             .background(YellowColor)
                     ) {

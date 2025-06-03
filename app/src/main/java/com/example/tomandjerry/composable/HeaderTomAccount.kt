@@ -1,5 +1,6 @@
 package com.example.tomandjerry.composable
 
+import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -34,7 +35,8 @@ fun HeaderTomAccount() {
     ) {
         Image(
             painter = painterResource(id = R.drawable.account_background),
-            contentDescription = "Tom Account Background"
+            contentDescription = "Tom Account Background",
+            modifier = Modifier.fillMaxWidth()
         )
 
         Column(
